@@ -8,6 +8,10 @@ branding:
   icon: 'tool'
   color: 'red'
 inputs:
+  cookbooks_dir:
+    description: 'Name of the cookbooks directory'
+    required: false
+    default: 'cookbooks'
   gems:
     description: 'String of gems to install'
     required: false
