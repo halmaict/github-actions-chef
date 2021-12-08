@@ -1,6 +1,5 @@
 ---
   name: Branch Cleanup
-  runs-on: self-hosted
   # This workflow is triggered on all closed pull requests.
   # However the script does not do anything it a merge was not performed.
   on:
@@ -13,6 +12,6 @@
   
   jobs:
     build:
-      runs-on: ubuntu-latest
+      runs-on: self-hosted
       steps:
         - uses: jessfraz/branch-cleanup-action@master
