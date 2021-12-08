@@ -1,6 +1,6 @@
-# chef-delivery
+# github-actions-chef
 
-[![CI State](https://github.com/actionshub/chef-delivery/workflows/release/badge.svg)](https://github.com/actionshub/chef-delivery)
+[![CI State](https://github.com/halmaict/github-actions-chef/workflows/release/badge.svg)](https://github.com/halmaict/github-actions-chef)
 
 A Github Action to run Chef Delivery on a cookbook
 
@@ -20,5 +20,5 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v2
     - name: Run Chef Delivery
-      uses: actionshub/chef-delivery@main
+      uses: halmaict/github-actions-chef@master
 ```
