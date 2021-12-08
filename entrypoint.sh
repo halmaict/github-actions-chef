@@ -10,10 +10,13 @@ if [ -n "${INPUT_GEMS}" ] ; then
   chef gem install -N "${INPUT_GEMS}"
 fi
 
+EXITVALUE=0
 echo "Checking if any work needs to be done..."
 while read cookbook; do
   echo "::group::${cookbook}"
   chef exec cookstyle --display-cop-names --extra-details ${cookbook}
+  [ $? -eq 1 ] && EXITVALUE=1
   echo "::endgroup::"
 done < <(git diff --name-only ${GITHUB_EVENT_BEFORE} ${GITHUB_SHA} cookbooks/| cut -d"/" -f1,2 | sort -u)
 
+exit $EXITVALUE
