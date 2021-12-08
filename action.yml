@@ -1,6 +1,6 @@
-name: 'Chef Delivery Action'
-author: 'Jason Field'
-description: 'Run Chef delivery on your cookbooks with ease'
+name: 'Chef Cookstyle Action'
+author: 'Frank Spijkerman'
+description: 'Run Chef Cookstyle on your cookbooks with ease'
 runs:
   using: 'docker'
   image: 'Dockerfile'

@@ -4,6 +4,8 @@
 
 A Github Action to run Chef Cookstyle on a collection of cookbooks
 
+Heavily inspired by 'Chef Delivery Action' of Jason Field, thanks!
+
 ## Usage
 
 ```yaml
