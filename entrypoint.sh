@@ -4,8 +4,8 @@
 #cp /cookstyle.json ._actionshub_problem-matchers/cookstyle.json
 #cp /rspec.json ._actionshub_problem-matchers/rspec.json
 
-echo "::add-matcher::/cookstyle.json"
-echo "::add-matcher::/rspec.json"
+echo "::add-matcher::cookstyle.json"
+echo "::add-matcher::rspec.json"
 if [ -n "${INPUT_GEMS}" ] ; then
   echo "Installing gem(s): ${INPUT_GEMS}"
   chef gem install -N "${INPUT_GEMS}"
