@@ -16,5 +16,5 @@ while read cookbook; do
   echo "::group::${cookbook}"
   chef exec cookstyle --display-cop-names --extra-details ${cookbook}
   echo "::endgroup::"
-done < <(git diff --name-only ${GITHUB_BASE_REF} ${GITHUB_SHA} cookbooks/| cut -d"/" -f1,2 | sort -u)
+done < <(git diff --name-only ${GITHUB_EVENT_BEFORE} ${GITHUB_SHA} cookbooks/| cut -d"/" -f1,2 | sort -u)
 
