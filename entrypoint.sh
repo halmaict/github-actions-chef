@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-#mkdir ._actionshub_problem-matchers
-#cp /cookstyle.json ._actionshub_problem-matchers/cookstyle.json
-#cp /rspec.json ._actionshub_problem-matchers/rspec.json
+mkdir ._problem-matchers
+cp /cookstyle.json ._problem-matchers/cookstyle.json
+cp /rspec.json ._problem-matchers/rspec.json
 
-echo "::add-matcher::cookstyle.json"
-echo "::add-matcher::rspec.json"
+echo "::add-matcher::._problem-matchers/cookstyle.json"
+echo "::add-matcher::._problem-matchers/rspec.json"
 if [ -n "${INPUT_GEMS}" ] ; then
   echo "Installing gem(s): ${INPUT_GEMS}"
   chef gem install -N "${INPUT_GEMS}"
