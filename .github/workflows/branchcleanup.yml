@@ -1,5 +1,6 @@
 ---
   name: Branch Cleanup
+  runs-on: self-hosted
   # This workflow is triggered on all closed pull requests.
   # However the script does not do anything it a merge was not performed.
   on:
