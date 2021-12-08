@@ -1,0 +1,14 @@
+name: 'Chef Delivery Action'
+author: 'Jason Field'
+description: 'Run Chef delivery on your cookbooks with ease'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'tool'
+  color: 'red'
+inputs:
+  gems:
+    description: 'String of gems to install'
+    required: false
+    default: ''
